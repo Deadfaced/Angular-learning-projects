@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-even',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './even.component.css'
 })
 export class EvenComponent {
+  @Input() number: number;
 
 }

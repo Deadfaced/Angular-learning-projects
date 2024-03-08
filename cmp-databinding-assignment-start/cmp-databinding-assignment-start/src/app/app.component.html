@@ -14,7 +14,18 @@
       </ol>
     </div>
     <div class="col-xs-12">
-      <app-game-control />
+      <app-game-control (increment)="incNum($event)" (stop)="onGameStopped($event)"/>
+    </div>
+    <div class="col-xs-12">
+      <p>{{ num }}</p>
+    </div>
+    <div class="col-xs-5" style="display: flex; justify-content: space-between;">
+      <div class="row">
+        <app-odd *ngFor="let count of oddCount" number="{{ count }}"/>
+      </div>
+      <div class="row">
+        <app-even *ngFor="let count of evenCount" number="{{ count }}"/>
+      </div>
     </div>
   </div>
 </div>
