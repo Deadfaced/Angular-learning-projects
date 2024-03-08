@@ -5,16 +5,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-12" *ngFor="let item of recipes">
-        <a href="#" class="list-group-item clearfix">
-            <div class="pull-left">
-                <h4 class="list-group-item-heading">{{ item.name }}</h4>
-                <p class="list-group-item-text">{{ item.description }}</p>
-            </div>
-            <span class="pull-right">
-                <img [src]="item.imagePath" alt="" class="image-responsive" style="max-height: 50px;">
-            </span>
-        </a>
-        <app-recipe-item></app-recipe-item>
+    <div class="col-xs-12">
+        <app-recipe-item *ngFor="let recipeItem of recipes;" (linkSelected)="showRecipe(recipeItem)" [item]="recipeItem"></app-recipe-item>
     </div>
 </div>

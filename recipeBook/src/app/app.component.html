@@ -1,9 +1,9 @@
-<app-header />
+<app-header (option)="checkOption($event)" /> <!-- removed (recipes)="onClickedRcp($event)" (shoppingList)="onClickedShpList($event)"  -->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes />
-      <app-shopping-list />
+      <app-recipes *ngIf="loadedOption === 'recipes'"/>
+      <app-shopping-list *ngIf="loadedOption === 'shoppingList'"/>
     </div>
   </div>
 </div>

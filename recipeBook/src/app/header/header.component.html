@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Recipes</a>
+                    <a role="button" (click)="onSelect('recipes')">Recipes</a> <!-- removed (click)="onRcpClick()" -->
                 </li>
                 <li>
-                    <a href="#">Shopping List</a>
+                    <a role="button" (click)="onSelect('shoppingList')">Shopping List</a> <!-- removed (click)="onShpListClick()" -->
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
