@@ -4,5 +4,5 @@
 <ng-template #showContent>
     <h3>{{ detailedRecipe.name }}</h3>
     <h5>{{ detailedRecipe.description }}</h5>
-    <img src="{{ detailedRecipe.imagePath }}" alt="">
+    <img [src]="detailedRecipe.imagePath" alt="">
 </ng-template>
