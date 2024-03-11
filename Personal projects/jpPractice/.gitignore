@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+!node_modules/bootstrap/dist/css/bootstrap.min.css
 npm-debug.log
 yarn-error.log
 
