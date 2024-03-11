@@ -1,0 +1,19 @@
+.socials-container{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    padding: 1rem;
+    background-color: #292929;
+    min-height: 150px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.socials{
+    border-radius: 50%;
+    border: 3px solid #000;
+}
+.socials * {
+    border-radius: 50%;
+    max-height: 50px;
+}
