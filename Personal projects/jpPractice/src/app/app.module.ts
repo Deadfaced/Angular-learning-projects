@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { HiraganaPageComponent } from './content/hiragana-page/hiragana-page.component';
 import { KatakanaPageComponent } from './content/katakana-page/katakana-page.component';
 import { StudyRoomComponent } from './content/study-room/study-room.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CardComponent } from './content/card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { StudyRoomComponent } from './content/study-room/study-room.component';
     SocialsComponent,
     HiraganaPageComponent,
     KatakanaPageComponent,
-    StudyRoomComponent
+    StudyRoomComponent,
+    PageNotFoundComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,11 @@ import { StudyRoomComponent } from './content/study-room/study-room.component';
       {
         path: 'study-room',
         component: StudyRoomComponent
+      },
+
+      {
+        path: '**',
+        component: PageNotFoundComponent
       }
     ])
   ],

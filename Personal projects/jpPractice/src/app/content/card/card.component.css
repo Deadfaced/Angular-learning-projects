@@ -1,0 +1,66 @@
+/*flashcards*/
+.flashcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 250px;
+  border: 2px solid rgb(165, 16, 16);
+  border-radius: 5px;
+  background-color: rgb(57, 153, 212);
+  position: relative;
+}
+.flashcard > p{
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+}
+
+
+.hiragana{
+  font-size: 3em;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+/*animation "shake" on correct input for each flashcard*/
+.shake{
+  animation: horizontal-shaking 0.35s;
+}
+@keyframes horizontal-shaking{
+  0%{transform: translateX(0)}
+  25%{transform: translateX(5px)}
+  50%{transform: translateX(-5px)}
+  75%{transform: translateX(5px)}
+  100%{transform: translateX(0)}
+}
+
+
+
+
+
+
+
+
+/*input boxes*/
+input[type="text"]{
+  position: absolute;
+  left: 20px;
+
+  right: 20px;
+  bottom: -20px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(219, 36, 36);
+  border-radius: 4px;
+  text-align: center;
+  font-family: sans-serif;
+}
+input[type="text"]:hover{
+  background-color: lightgray;
+}
+input[type="text"]:focus{
+  border: 2px solid #555;
+}

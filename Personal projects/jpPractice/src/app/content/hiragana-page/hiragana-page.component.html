@@ -1,1 +1,3 @@
-<p>hiragana-page works!</p>
+<div id="flashcard-container">
+  <app-card *ngFor="let card of shuffledChars" char="{{ card.char }}" />
+</div>
