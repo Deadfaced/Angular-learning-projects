@@ -1,6 +1,7 @@
 .container-fluid{
     height: 100dvh;
     width: 100dvw;
+    max-width: 100%;
     position: relative;
     background-color: #181818;
     color: white !important;

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -7,6 +7,22 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() char: string;
-  @Input() inputValue: string;
+  @Input() romaji: string;
+  @Input() alt: string;
+  @Input() inputIndex: number;
+  @Output() sendAnswer = new EventEmitter<number>();
+
+  correctAnswer: boolean = undefined;
+
+  validation(event){
+    if(event.target.value === this.romaji || event.target.value === this.alt){
+      this.correctAnswer = true;
+      this.sendAnswer.emit(this.inputIndex);
+      const nextInput: string = (++this.inputIndex).toString();
+      document.getElementById(nextInput).focus();
+    } else{
+      this.correctAnswer = false;
+    }
+  }
 
 }

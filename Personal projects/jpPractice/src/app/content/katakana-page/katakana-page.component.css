@@ -1,0 +1,7 @@
+#flashcard-container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+    text-align: center;
+  }

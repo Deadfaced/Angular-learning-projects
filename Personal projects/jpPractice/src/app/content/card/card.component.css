@@ -26,6 +26,7 @@
 
 /*animation "shake" on correct input for each flashcard*/
 .shake{
+  background-color: red !important;
   animation: horizontal-shaking 0.35s;
 }
 @keyframes horizontal-shaking{
@@ -63,4 +64,7 @@ input[type="text"]:hover{
 }
 input[type="text"]:focus{
   border: 2px solid #555;
+}
+input:disabled{
+  background-color: lightgray;
 }
