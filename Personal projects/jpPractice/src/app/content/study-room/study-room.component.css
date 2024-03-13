@@ -4,6 +4,9 @@
 :host{
     width: 100%;
 }
+table{
+    background-color: #292929 !important;
+}
 th, td{
     width: 33%;
     text-align: center;

@@ -1,5 +1,6 @@
 .navbar{
     padding: 2rem;
+    background-color: #292929 !important;
 }
 .navbar a{
     color: white;
