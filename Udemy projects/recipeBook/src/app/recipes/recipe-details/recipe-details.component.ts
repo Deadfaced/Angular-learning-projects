@@ -9,5 +9,5 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeDetailsComponent {
   @Input() detailedRecipe: Recipe;
-
+  
 }

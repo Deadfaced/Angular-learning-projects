@@ -12,6 +12,5 @@ export class RecipesComponent {
 
   onRecipeSelected(event){
     this.showRecipe = event
-    console.log(this.showRecipe);
   }
 }
