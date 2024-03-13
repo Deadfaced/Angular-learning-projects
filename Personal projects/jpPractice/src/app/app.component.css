@@ -6,3 +6,7 @@
     background-color: #181818;
     color: white !important;
 }
+.content{
+    min-height: calc(100% - 6rem);
+    max-height: 100%;
+}

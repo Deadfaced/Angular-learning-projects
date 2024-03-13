@@ -12,6 +12,7 @@ import { KatakanaPageComponent } from './content/katakana-page/katakana-page.com
 import { StudyRoomComponent } from './content/study-room/study-room.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CardComponent } from './content/card/card.component';
+import { ContentCardComponent } from './content/content-card/content-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CardComponent } from './content/card/card.component';
     KatakanaPageComponent,
     StudyRoomComponent,
     PageNotFoundComponent,
-    CardComponent
+    CardComponent,
+    ContentCardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,11 @@ import { CardComponent } from './content/card/card.component';
     RouterModule.forRoot([
       {
         path: '',
+        redirectTo: '/main-page',
+        pathMatch: 'full'
+      },
+      {
+        path: 'main-page',
         component: ContentComponent
       },
       {
