@@ -35,5 +35,4 @@ export class HiraganaPageComponent implements OnInit {
     this.score = this.hiraganaCharacters.score;
     console.log(this.score);
   }
-
 }

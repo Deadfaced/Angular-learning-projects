@@ -1,4 +1,7 @@
+import { Injectable } from "@angular/core";
 import { Character } from "./shared/character.model";
+
+@Injectable()
 
 export class kanaChars{
     hiraganaChars: Character[] = [
