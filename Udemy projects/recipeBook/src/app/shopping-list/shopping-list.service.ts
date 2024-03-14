@@ -14,16 +14,19 @@ export class ShoppingListService{
     getIngredients(){
         return this.ingredients.slice();
     }
-    setIngredients(ingredients: Ingredient[]){
-        this.ingredients = ingredients;
-    }
 
     addIngredient(ing: Ingredient){
+        this.ingredients.forEach(element => {
+            if (element.name === ing.name) {
+                element.amount += Number(ing.amount);
+                this.ingredientsChanged.emit(this.ingredients.slice());
+            }
+        });
         this.ingredients.push(ing);
         this.ingredientsChanged.emit(this.ingredients.slice());
     }
     clearIngredients(){
-        this.setIngredients([]);
+        this.ingredients = [];
         this.ingredientsChanged.emit(this.ingredients.slice());
     }
 }
