@@ -1,5 +1,5 @@
 .socials-container{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 20%;
     padding: 1rem;
