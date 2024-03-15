@@ -3,22 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15rem;
-  height: 250px;
+  width: 12rem;
+  height: 12rem;
   border: 2px solid rgb(165, 16, 16);
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: rgb(57, 153, 212);
   position: relative;
-}
-.flashcard > p{
-  display: flex;
-  position: absolute;
-  bottom: 60px;
+  scroll-snap-align: center;
 }
 
 
 .hiragana{
-  font-size: 3em;
+  font-size: 2em;
   font-family: sans-serif;
   color: white;
   font-weight: bold;

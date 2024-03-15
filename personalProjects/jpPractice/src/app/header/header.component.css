@@ -1,6 +1,7 @@
 .navbar{
     padding: 2rem;
     background-color: #292929 !important;
+    max-width: 100% !important;
 }
 .navbar a{
     color: white;

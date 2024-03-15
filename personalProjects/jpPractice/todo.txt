@@ -1,0 +1,4 @@
+- socials to be fixed on the bottom of the screen for mobile
+- flashcards div must have scroll instead of the entire page:
+  - change each card's size and number of cards per row
+- navbar must be a burguer menu on mobile

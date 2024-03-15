@@ -1,4 +1,4 @@
-<div id="flashcard-container" class="py-5">
+<div id="flashcard-container" class="pb-5">
   <app-card
   *ngFor="let card of shuffledChars; let i = index"
   inputIndex="{{ i }}"
@@ -9,10 +9,12 @@
   />
 
 </div>
-<button type="button" class="btn btn-primary" (click)="showScore()">
-  Submit answers
-</button>
-<div *ngIf="submitted">
-  <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
-  <p>Score: {{ score }}%</p>
+<div class="w-100 d-flex flex-column align-items-center">
+  <button type="button" class="btn btn-primary" (click)="showScore()">
+    Submit answers
+  </button>
+  <div *ngIf="submitted" class="my-2">
+    <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
+    <p>Score: {{ score }}%</p>
+  </div>
 </div>
