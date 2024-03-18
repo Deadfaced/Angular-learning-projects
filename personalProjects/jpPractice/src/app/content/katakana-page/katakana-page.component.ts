@@ -33,6 +33,5 @@ export class KatakanaPageComponent {
 
     this.katakanaCharacters.scoreDisplay(this.totalCorrect, this.totalAnswers);
     this.score = this.katakanaCharacters.score;
-    console.log(this.score);
   }
 }
