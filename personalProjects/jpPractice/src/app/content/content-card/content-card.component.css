@@ -18,6 +18,7 @@
     height: 80dvh;
     width: 80dvw;
     margin: 10dvh 10dvw;
+    transform: none !important;
 }
 
 p{
