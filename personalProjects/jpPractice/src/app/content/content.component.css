@@ -1,11 +1,52 @@
 .main-page{
-  height: 100%;
+  min-height: 100%;
   padding: 3rem 10rem;
   background-image: url(../../assets/homepagebg.jpg);
   background-size: 90% auto;
   background-repeat: no-repeat;
   background-position: bottom;
+  display: grid;
+  grid-template-areas: 
+    '. hira .'
+    'study . kata'
+  ;
+  width: 100%;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
 }
+
+.main-page > div{
+  scroll-snap-align: center;
+}
+
+.main-page.mobile{
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+}
+
+.hiragana{
+  grid-area: hira;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+.katakana{
+  grid-area: kata;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+.study-room{
+  grid-area: study;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
 :host{
   display: flex;
   width: 100% !important;

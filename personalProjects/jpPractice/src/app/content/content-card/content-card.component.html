@@ -1,4 +1,4 @@
-<div class="option">
+<div class="option" [ngClass]="{'mobile-option': mobileOption}">
     <p>{{ rTitle }}</p>
     <button routerLink="{{ cPath }}">{{ buttText }}</button>
     <p class="font-weight-normal">{{ kTitle }}</p>
