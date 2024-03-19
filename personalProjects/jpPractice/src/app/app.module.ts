@@ -13,6 +13,7 @@ import { StudyRoomComponent } from './content/study-room/study-room.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CardComponent } from './content/card/card.component';
 import { ContentCardComponent } from './content/content-card/content-card.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,34 +31,7 @@ import { ContentCardComponent } from './content/content-card/content-card.compon
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/main-page',
-        pathMatch: 'full'
-      },
-      {
-        path: 'main-page',
-        component: ContentComponent
-      },
-      {
-        path: 'hiragana-page',
-        component: HiraganaPageComponent
-      },
-      {
-        path: 'katakana-page',
-        component: KatakanaPageComponent
-      },
-      {
-        path: 'study-room',
-        component: StudyRoomComponent
-      },
-
-      {
-        path: '**',
-        component: PageNotFoundComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
