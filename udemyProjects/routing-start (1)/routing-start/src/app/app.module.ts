@@ -11,9 +11,10 @@ import { UserComponent } from './users/user/user.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
-import { RouterModule, Routes } from '@angular/router';
 import { UsersService } from './users/users.service';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './auth.service';
+import { canActivateGuard } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ServersService, UsersService],
+  providers: [ServersService, UsersService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
