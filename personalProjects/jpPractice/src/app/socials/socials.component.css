@@ -8,6 +8,36 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+.socials-container.mobile{
+    top: 0 !important;
+    background-color: transparent !important;
+    width: 100dvw;
+    flex-direction: row !important;
+    min-height: fit-content;
+    padding: 0 !important;
+    border: none !important;
+    z-index: 10;
+}
+.ghBackg, .liBackg{
+    position: absolute;
+    top: -75px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    z-index: 0;
+}
+.ghBackg{
+    left: -75px;
+    background-color: #fff;
+}
+.liBackg{
+    right: -75px;
+    background-color: #0076B2;
+}
+
+.socials.mobile{
+    border: none !important;
+}
 
 .socials{
     border-radius: 50%;
