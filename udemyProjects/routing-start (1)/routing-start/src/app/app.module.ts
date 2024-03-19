@@ -13,33 +13,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersService } from './users/users.service';
-
-const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'servers',
-    component: ServersComponent
-  },
-  {
-    path: 'servers/:id',
-    component: ServerComponent
-  },
-  {
-    path: 'servers/:id/edit',
-    component: EditServerComponent
-  },
-  {
-    path: 'users',
-    component: UsersComponent
-  },
-  {
-    path: 'users/:id',
-    component: UserComponent
-  }
-]
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -54,7 +28,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ServersService, UsersService],
   bootstrap: [AppComponent]

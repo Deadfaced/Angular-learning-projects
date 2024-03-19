@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { UsersService } from '../users.service';
 
@@ -8,7 +8,8 @@ import { UsersService } from '../users.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: any = {};
+  user: {id: number, name: string};
+  routeId: number;
   
   constructor(private usersService: UsersService, private route: ActivatedRoute) { }
   
@@ -17,13 +18,8 @@ export class UserComponent implements OnInit {
     this.route.params
       .subscribe(
         (params: Params) => {
-          if(params['id']){
-            this.user.id = this.usersService.getUser(Number(params['id'])).id;
-            this.user.name = this.usersService.getUser(Number(params['id'])).name;
-          }else{
-            this.user.id = this.usersService.getUser(1).id;
-            this.user.name = this.usersService.getUser(1).name;
-          }
+          this.routeId = params['id'];
+          this.user = this.usersService.getUser(+this.routeId);
         }
     )
   }

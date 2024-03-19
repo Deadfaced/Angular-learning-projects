@@ -1,6 +1,3 @@
 .container {
   margin-top: 30px;
 }
-.nav-tabs:not(.nav-item){
-  border-bottom: 1px solid #dee2e6;
-}
