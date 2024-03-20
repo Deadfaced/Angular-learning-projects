@@ -15,16 +15,26 @@ export class StudyRoomComponent implements OnInit{
   hiraganaChars: Character[] = [];
   katakanaChars: Character[] = [];
   mobile = false;
+  mobileLandscape = false;
 
   ngOnInit() {
-    this.responsive.observe(Breakpoints.HandsetPortrait)
-      .subscribe(result => {
-        this.mobile = false;
+    this.responsive.observe([
+      Breakpoints.HandsetPortrait, 
+      Breakpoints.HandsetLandscape,
+      Breakpoints.TabletLandscape,
+      Breakpoints.TabletPortrait
+    ])
+      .subscribe(
+        result => {
+          const breakpoints = result.breakpoints;
 
-        if(result.matches){
-          this.mobile = true;
+          if(breakpoints[Breakpoints.HandsetPortrait]){
+            this.mobile = true;
+          }else if(breakpoints[Breakpoints.HandsetLandscape]){
+            this.mobileLandscape = true;
+          }
         }
-      })
+      )
 
     this.hiraganaChars = this.jpChars.hiraganaChars.slice();
     this.katakanaChars = this.jpChars.katakanaChars.slice();

@@ -28,6 +28,14 @@
   display: none;
 }
 
+.main-page.mobileLandscape{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 2rem;
+}
+
+
 .hiragana, .katakana, .study-room{
   display: flex;
   justify-content: center;

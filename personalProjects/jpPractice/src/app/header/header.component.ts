@@ -1,4 +1,4 @@
-  import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,19 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   navbarHidden = false;
+  tabletLandscape = false;
 
   constructor(private responsive: BreakpointObserver){}
   
   ngOnInit() {
     this.responsive.observe([
-      Breakpoints.TabletPortrait,
-      Breakpoints.HandsetPortrait
+      Breakpoints.HandsetLandscape,
+      Breakpoints.HandsetPortrait,
+      Breakpoints.TabletLandscape
     ])
       .subscribe(result => {
-        this.navbarHidden = false;
+        const breakpoints = result.breakpoints;
 
-        if(result.matches){
+        this.navbarHidden = false;
+        this.tabletLandscape = false;
+
+        if(breakpoints[Breakpoints.HandsetPortrait]){
           this.navbarHidden = true;
+        }else if(breakpoints[Breakpoints.HandsetLandscape]){
+          this.navbarHidden = true;
+        }else if(breakpoints[Breakpoints.TabletLandscape]){
+          this.tabletLandscape = true;
         }
 
       })

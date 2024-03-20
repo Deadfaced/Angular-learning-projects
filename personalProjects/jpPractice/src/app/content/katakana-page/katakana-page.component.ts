@@ -18,16 +18,25 @@ export class KatakanaPageComponent {
   score: string;
   approved: boolean;
   mobile = false;
+  mobileLandscape = false;
 
   constructor(private katakanaCharacters: kanaChars, private responsive: BreakpointObserver){}
 
   ngOnInit(){
-    this.responsive.observe(Breakpoints.HandsetPortrait)
+    this.responsive.observe([
+      Breakpoints.HandsetPortrait,
+      Breakpoints.HandsetLandscape
+    ])
       .subscribe(result => {
-        this.mobile = false;
+        const breakpoints = result.breakpoints;
 
-        if(result.matches){
+        this.mobile = false;
+        this.mobileLandscape = false;
+
+        if(breakpoints[Breakpoints.HandsetPortrait]){
           this.mobile = true;
+        }else if(breakpoints[Breakpoints.HandsetLandscape]){
+          this.mobileLandscape = true;
         }
       })
 

@@ -8,14 +8,21 @@ html{
     overflow: scroll;
     scroll-behavior: smooth;
 }
-.study-room.mobile{
+.study-room.mobile,
+.study-room.mobileLandscape{
     flex-direction: column;
+    align-items: center;
 }
 .study-room.mobile > div{
     width: 100% !important;
 }
+.study-room.mobileLandscape > div{
+    width: 90% !important;
+}
 .study-room.mobile td, 
-.study-room.mobile th{
+.study-room.mobile th,
+.study-room.mobileLandscape td,
+.study-room.mobileLandscape th{
     height: fit-content;
     padding: 0.5rem;
 }

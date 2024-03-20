@@ -29,6 +29,8 @@ export class ContentComponent implements OnInit{
           if(breakpoints[Breakpoints.HandsetPortrait]){
             this.isMobile = true;
             this.isDesktop = false;
+          }else if(breakpoints[Breakpoints.HandsetLandscape]){
+            this.isMobileLandscape = true;
           }
         }
       )

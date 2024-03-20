@@ -18,16 +18,25 @@ export class HiraganaPageComponent implements OnInit {
   score: string;
   approved: boolean;
   mobile = false;
+  mobileLandscape = false;
 
   constructor(private hiraganaCharacters: kanaChars, private responsive: BreakpointObserver){}
 
   ngOnInit(){
-    this.responsive.observe(Breakpoints.HandsetPortrait)
+    this.responsive.observe([
+      Breakpoints.HandsetPortrait,
+      Breakpoints.HandsetLandscape
+    ])
       .subscribe(result => {
-        this.mobile = false;
+        const breakpoints = result.breakpoints;
 
-        if(result.matches){
+        this.mobile = false;
+        this.mobileLandscape = false;
+
+        if(breakpoints[Breakpoints.HandsetPortrait]){
           this.mobile = true;
+        }else if(breakpoints[Breakpoints.HandsetLandscape]){
+          this.mobileLandscape = true;
         }
       })
 
@@ -49,7 +58,7 @@ export class HiraganaPageComponent implements OnInit {
     if(+this.score >= 50){
       this.approved = true;
     }else{
-      this.approved = false;
+      this.approved = true;
     }
   }
 }

@@ -1,4 +1,8 @@
-<div id="flashcard-container" class="pb-5" [ngClass]="{'mobile': mobile}">
+<div
+  id="flashcard-container"
+  class="pb-5"
+  [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
+  
   <app-card
   *ngFor="let card of shuffledChars; let i = index"
   inputIndex="{{ i }}"
@@ -9,11 +13,11 @@
   />
 
 </div>
-<div class="d-flex align-items-start" [ngStyle]="{'justify-content': submitted === true && mobile === true ? 'space-between' : 'center', 'width': submitted === true && mobile === true ? '90dvw' : '100%'}" style="gap: 2rem;">
+<div class="score" style="gap: 2rem;" [ngClass]="{'mobile': submitted && mobile}">
   <button type="button" class="btn btn-primary" (click)="showScore()">
     Submit answers
   </button>
-  <div *ngIf="submitted">
+  <div class="score-submitted" *ngIf="submitted" [ngClass]="{'mobileLandscape': mobileLandscape}">
     <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
     <p class="btn" [ngClass]="{'approved': approved, 'reproved': !approved}">Score: {{ score }}%</p>
   </div>
