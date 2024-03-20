@@ -4,8 +4,8 @@
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 3rem;
   text-align: center;
-  margin: 3rem 10rem;
-  max-height: 43rem;
+  margin: 3rem 10rem 2rem 10rem;
+  max-height: 44rem;
   overflow: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -15,5 +15,5 @@
 
 #flashcard-container.mobile{
   grid-template-columns: repeat(1, 1fr);
-  margin: 3rem 0;
+  margin: 3rem 0 2rem 0;
 }
