@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { ExtraOptions, RouterModule, Routes } from "@angular/router";
 import { ContentComponent } from "./content/content.component";
 import { HiraganaPageComponent } from "./content/hiragana-page/hiragana-page.component";
 import { KatakanaPageComponent } from "./content/katakana-page/katakana-page.component";
@@ -33,10 +33,14 @@ const appRoutes: Routes = [
         path: '**',
         component: PageNotFoundComponent
       }
-]
+];
+const routerOptions: ExtraOptions = {
+  anchorScrolling: "enabled"
+  //scrollPositionRestoration: "enabled"
+};
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes)],
+    imports: [RouterModule.forRoot(appRoutes, routerOptions)],
     exports: [RouterModule]
 })
 

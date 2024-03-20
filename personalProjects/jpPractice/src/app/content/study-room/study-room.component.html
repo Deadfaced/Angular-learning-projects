@@ -1,34 +1,40 @@
-<div class="study-room w-100 d-flex justify-content-around p-5">
-    <div class="w-40">
-        <table class="w-100 table table-bordered table-dark">
-            <thead>
-                <th>Kana</th>
-                <th>Romaji</th>
-                <th>Alt romaji</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let char of hiraganaChars">
-                    <td>{{ char.char }}</td>
-                    <td>{{ char.romaji }}</td>
-                    <td>{{ char.alt }}</td>
-                </tr>
-            </tbody>
-        </table>
+<div>
+    <div class="study-room h-100 w-100 d-flex px-5" [ngClass]="{'mobile': mobile}">
+        <div id="hiragana" class="py-7 w-40">
+            <table class="w-100 table table-bordered table-dark">
+                <thead>
+                    <th>Kana</th>
+                    <th>Romaji</th>
+                    <th>Alt romaji</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let char of hiraganaChars">
+                        <td>{{ char.char }}</td>
+                        <td>{{ char.romaji }}</td>
+                        <td>{{ char.alt }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="katakana" class="py-7 w-40">
+            <table class="w-100 table table-bordered table-dark">
+                <thead>
+                    <th>Kana</th>
+                    <th>Romaji</th>
+                    <th>Alt romaji</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let char of katakanaChars">
+                        <td>{{ char.char }}</td>
+                        <td>{{ char.romaji }}</td>
+                        <td>{{ char.alt }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="w-40">
-        <table class="w-100 table table-bordered table-dark">
-            <thead>
-                <th>Kana</th>
-                <th>Romaji</th>
-                <th>Alt romaji</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let char of katakanaChars">
-                    <td>{{ char.char }}</td>
-                    <td>{{ char.romaji }}</td>
-                    <td>{{ char.alt }}</td>
-                </tr>
-            </tbody>
-        </table>
+    <div *ngIf="mobile" class="scrollBtns" [ngClass]="{'mobile': mobile}">
+        <button (click)="scrolltoHiragana()" class="btn btn-primary">Hiragana</button>
+        <button (click)="scrolltoKatakana()" class="btn btn-primary">Katakana</button>
     </div>
 </div>

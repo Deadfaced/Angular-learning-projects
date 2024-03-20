@@ -1,5 +1,23 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .study-room{
     height: fit-content;
+    justify-content: space-around;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.study-room.mobile{
+    flex-direction: column;
+}
+.study-room.mobile > div{
+    width: 100% !important;
+}
+.study-room.mobile td, 
+.study-room.mobile th{
+    height: fit-content;
+    padding: 0.5rem;
 }
 :host{
     width: 100%;
@@ -12,4 +30,15 @@ th, td{
     text-align: center;
     vertical-align: middle;
     padding: 1.5rem 0;
+}
+
+.scrollBtns{
+    position: fixed;
+    bottom: 5%;
+    width: 100dvw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.scrollBtns > button{
+    width: 40%;
 }
