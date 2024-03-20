@@ -29,7 +29,7 @@ export class kanaChars{
         new Character('て', 'te', ''),
         new Character('と', 'to', ''),
     
-        new Character('な', 'na', ''),
+        new Character('な', 'na', ''),  
         new Character('に', 'ni', ''),
         new Character('ぬ', 'nu', ''),
         new Character('ね', 'ne', ''),
@@ -297,9 +297,10 @@ export class kanaChars{
         }
         return array;
       };
+      
     
-      shuffledHiraganaChars = this.shuffle(this.hiraganaChars);
-      shuffledKatakanaChars = this.shuffle(this.katakanaChars);
+      shuffledHiraganaChars = this.shuffle(this.hiraganaChars.slice());
+      shuffledKatakanaChars = this.shuffle(this.katakanaChars.slice());
     
       
       scoreDisplay(tCorrect: number, tAnswers: number){
