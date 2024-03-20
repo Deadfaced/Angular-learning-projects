@@ -15,7 +15,7 @@ export class CardComponent {
   correctAnswer: boolean = undefined;
 
   validation(event){
-    if(event.target.value === this.romaji || event.target.value === this.alt){
+    if(event.target.value.toLowerCase() === this.romaji || event.target.value.toLowerCase() === this.alt){
       this.correctAnswer = true;
       this.sendAnswer.emit(this.inputIndex);
       const nextInput: string = (++this.inputIndex).toString();
