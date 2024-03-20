@@ -16,7 +16,8 @@ export class HeaderComponent implements OnInit {
     this.responsive.observe([
       Breakpoints.HandsetLandscape,
       Breakpoints.HandsetPortrait,
-      Breakpoints.TabletLandscape
+      Breakpoints.TabletLandscape,
+      Breakpoints.TabletPortrait
     ])
       .subscribe(result => {
         const breakpoints = result.breakpoints;
@@ -29,6 +30,8 @@ export class HeaderComponent implements OnInit {
         }else if(breakpoints[Breakpoints.HandsetLandscape]){
           this.navbarHidden = true;
         }else if(breakpoints[Breakpoints.TabletLandscape]){
+          this.tabletLandscape = true;
+        }else if(breakpoints[Breakpoints.TabletPortrait]){
           this.tabletLandscape = true;
         }
 

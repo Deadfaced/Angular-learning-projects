@@ -34,10 +34,11 @@ button{
     background-color: #b63440;
     color: white;
     font-weight: bold;
+    min-width: 60%;
     padding: 12px 35px;
     border: none;
     cursor: pointer;
-    text-align: center;
+    justify-content: center;
     font-family: sans-serif;
     border-radius: 8px;
     user-select: none;

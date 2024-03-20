@@ -35,6 +35,12 @@
   margin: 2rem;
 }
 
+.main-page.tablet{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 .hiragana, .katakana, .study-room{
   display: flex;

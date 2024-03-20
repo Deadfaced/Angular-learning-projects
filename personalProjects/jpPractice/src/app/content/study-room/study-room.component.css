@@ -9,14 +9,16 @@ html{
     scroll-behavior: smooth;
 }
 .study-room.mobile,
-.study-room.mobileLandscape{
+.study-room.mobileLandscape,
+.study-room.tablet{
     flex-direction: column;
     align-items: center;
 }
 .study-room.mobile > div{
     width: 100% !important;
 }
-.study-room.mobileLandscape > div{
+.study-room.mobileLandscape > div,
+.study-room.tablet > div{
     width: 90% !important;
 }
 .study-room.mobile td, 
@@ -48,4 +50,7 @@ th, td{
 }
 .scrollBtns > button{
     width: 40%;
+}
+.scrollBtns.tablet > button{
+    width: 30%;
 }

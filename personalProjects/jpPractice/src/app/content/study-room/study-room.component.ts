@@ -16,6 +16,7 @@ export class StudyRoomComponent implements OnInit{
   katakanaChars: Character[] = [];
   mobile = false;
   mobileLandscape = false;
+  tablet = false;
 
   ngOnInit() {
     this.responsive.observe([
@@ -28,10 +29,16 @@ export class StudyRoomComponent implements OnInit{
         result => {
           const breakpoints = result.breakpoints;
 
+          this.mobile = false;
+          this.mobileLandscape = false;
+          this.tablet = false;
+
           if(breakpoints[Breakpoints.HandsetPortrait]){
             this.mobile = true;
           }else if(breakpoints[Breakpoints.HandsetLandscape]){
             this.mobileLandscape = true;
+          }else if(breakpoints[Breakpoints.TabletPortrait]){
+            this.tablet = true;
           }
         }
       )

@@ -1,5 +1,5 @@
 <div>
-    <div class="study-room h-100 w-100 d-flex px-5" [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
+    <div class="study-room h-100 w-100 d-flex px-5" [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape, 'tablet': tablet}">
         <div id="hiragana" class="py-7 w-40">
             <table class="w-100 table table-bordered table-dark">
                 <thead>
@@ -33,7 +33,7 @@
             </table>
         </div>
     </div>
-    <div *ngIf="mobile || mobileLandscape" class="scrollBtns" [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
+    <div *ngIf="mobile || mobileLandscape || tablet" class="scrollBtns" [ngClass]="{'mobile': mobile, 'tablet': tablet}">
         <button (click)="scrolltoHiragana()" class="btn btn-primary">Hiragana</button>
         <button (click)="scrolltoKatakana()" class="btn btn-primary">Katakana</button>
     </div>

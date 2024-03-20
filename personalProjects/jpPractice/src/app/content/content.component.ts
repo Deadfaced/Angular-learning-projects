@@ -26,11 +26,20 @@ export class ContentComponent implements OnInit{
         result => {
           const breakpoints = result.breakpoints;
 
+          this.isMobile = false;
+          this.isMobileLandscape = false;
+          this.isTablet = false;
+          this.isTabletLandscape = false;
+
           if(breakpoints[Breakpoints.HandsetPortrait]){
             this.isMobile = true;
             this.isDesktop = false;
           }else if(breakpoints[Breakpoints.HandsetLandscape]){
             this.isMobileLandscape = true;
+          }else if(breakpoints[Breakpoints.TabletPortrait]){
+            this.isTablet = true;
+          }else if(breakpoints[Breakpoints.TabletLandscape]){
+            this.isTabletLandscape = true;
           }
         }
       )
