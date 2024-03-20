@@ -1,10 +1,14 @@
-<nav class="navbar bg-dark" [ngClass]="{'hidden': navbarHidden}">
-    <div class="home px-4">
-        <a routerLink="/">Home</a>
+<nav class="navbar d-flex justify-content-between align-items-center bg-dark" [ngClass]="{'hidden': navbarHidden}">
+    <div class="w-15 px-4">
+        <a routerLink="/study-room" routerLinkActive="text-danger">Study Room</a>
     </div>
-    <div class="d-flex justify-content-between w-25 px-4">
+    <div class="home">
+        <a routerLink="/main-page">
+            <img src="../../assets/homeIconWhite.jpg" height="50px" width="50px" alt="" style="border-radius: 50%;">
+        </a>
+    </div>
+    <div class="d-flex justify-content-between w-15 px-4">
         <a routerLink="/hiragana-page" routerLinkActive="text-danger">Hiragana</a>
         <a routerLink="/katakana-page" routerLinkActive="text-danger">Katakana</a>
-        <a routerLink="/study-room" routerLinkActive="text-danger">Study Room</a>
     </div>
 </nav>

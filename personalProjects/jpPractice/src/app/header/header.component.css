@@ -1,7 +1,8 @@
 .navbar{
-    padding: 2rem;
+    padding: 1rem;
     background-color: #292929 !important;
     max-width: 100% !important;
+    max-height: fit-content;
 }
 .navbar a{
     color: white;
