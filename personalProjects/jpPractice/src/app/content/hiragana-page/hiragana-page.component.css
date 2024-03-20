@@ -22,3 +22,14 @@
   grid-gap: 2rem;
   margin: 4rem 0 1rem 0;
 }
+
+.approved{
+  color: green;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+.reproved{
+  color: red;
+  background-color: darksalmon;
+  border: 1px solid red;
+}

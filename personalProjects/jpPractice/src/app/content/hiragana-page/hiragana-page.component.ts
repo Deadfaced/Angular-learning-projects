@@ -16,6 +16,7 @@ export class HiraganaPageComponent implements OnInit {
   totalCorrect: number;
   totalAnswers: number;
   score: string;
+  approved: boolean;
   mobile = false;
 
   constructor(private hiraganaCharacters: kanaChars, private responsive: BreakpointObserver){}
@@ -44,5 +45,11 @@ export class HiraganaPageComponent implements OnInit {
 
     this.hiraganaCharacters.scoreDisplay(this.totalCorrect, this.totalAnswers);
     this.score = this.hiraganaCharacters.score;
+
+    if(+this.score >= 50){
+      this.approved = true;
+    }else{
+      this.approved = false;
+    }
   }
 }

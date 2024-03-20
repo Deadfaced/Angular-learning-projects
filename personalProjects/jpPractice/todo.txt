@@ -1,5 +1,1 @@
-- navbar must be a burguer menu on mobile
 - score should have css according to score value being >= 50% || < 50%
-- validation() method not working as intended in hiragana/katakana pages
-- hiragana/katakana pages shouldn't have flashcard-container as 100% width
-- check hiragana/katakana pages' score section's size

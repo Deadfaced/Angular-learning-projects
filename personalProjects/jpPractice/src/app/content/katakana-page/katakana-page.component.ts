@@ -16,6 +16,7 @@ export class KatakanaPageComponent {
   totalCorrect: number;
   totalAnswers: number;
   score: string;
+  approved: boolean;
   mobile = false;
 
   constructor(private katakanaCharacters: kanaChars, private responsive: BreakpointObserver){}
@@ -44,5 +45,11 @@ export class KatakanaPageComponent {
 
     this.katakanaCharacters.scoreDisplay(this.totalCorrect, this.totalAnswers);
     this.score = this.katakanaCharacters.score;
+
+    if(+this.score >= 50){
+      this.approved = true;
+    }else{
+      this.approved = false;
+    }
   }
 }
