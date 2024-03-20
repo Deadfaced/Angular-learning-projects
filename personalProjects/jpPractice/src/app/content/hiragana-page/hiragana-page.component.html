@@ -9,7 +9,7 @@
   />
 
 </div>
-<div class="d-flex align-items-start" [ngStyle]="{'justify-content': submitted === true && mobile === true ? 'space-between' : 'center', 'width': submitted === true ? '90dvw' : '100%'}" style="gap: 2rem;">
+<div class="d-flex align-items-start" [ngStyle]="{'justify-content': submitted === true && mobile === true ? 'space-between' : 'center', 'width': submitted === true && mobile === true ? '90dvw' : '100%'}" style="gap: 2rem;">
   <button type="button" class="btn btn-primary" (click)="showScore()">
     Submit answers
   </button>
