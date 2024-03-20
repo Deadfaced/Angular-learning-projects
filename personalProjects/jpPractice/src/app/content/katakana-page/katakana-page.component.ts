@@ -30,7 +30,7 @@ export class KatakanaPageComponent {
         }
       })
 
-    this.shuffledChars = this.katakanaCharacters.shuffledKatakanaChars;
+    this.shuffledChars = this.katakanaCharacters.shuffledKatakanaChars.slice();
   }
 
   countCorrectAnswers(event){

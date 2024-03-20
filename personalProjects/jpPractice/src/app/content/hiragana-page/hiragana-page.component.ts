@@ -30,7 +30,7 @@ export class HiraganaPageComponent implements OnInit {
         }
       })
 
-    this.shuffledChars = this.hiraganaCharacters.shuffledHiraganaChars;
+    this.shuffledChars = this.hiraganaCharacters.shuffledHiraganaChars.slice();
   }
 
   countCorrectAnswers(event){

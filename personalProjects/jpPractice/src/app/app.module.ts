@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CardComponent } from './content/card/card.component';
 import { ContentCardComponent } from './content/content-card/content-card.component';
 import { AppRoutingModule } from './app-routing.module';
+import { kanaChars } from './kanaChars.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { AppRoutingModule } from './app-routing.module';
     FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [kanaChars],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

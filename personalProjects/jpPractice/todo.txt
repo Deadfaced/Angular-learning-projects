@@ -1,2 +1,3 @@
 - navbar must be a burguer menu on mobile
-- score should have css according to score value being >= 50% || < 50%
+- score should have css according to score value being >= 50% || < 50%  
+- add home button to top-center of the screen for mobile
