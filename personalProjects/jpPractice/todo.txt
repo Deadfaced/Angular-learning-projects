@@ -1,4 +1,2 @@
-- socials to be fixed on the bottom of the screen for mobile
 - navbar must be a burguer menu on mobile
-- submit score must be horizontal to prevent adding scroll when clicking button;
 - score should have css according to score value being >= 50% || < 50%

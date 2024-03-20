@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Character } from '../../shared/character.model';
 import { kanaChars } from '../../kanaChars.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-katakana-page',
@@ -15,10 +16,20 @@ export class KatakanaPageComponent {
   totalCorrect: number;
   totalAnswers: number;
   score: string;
+  mobile = false;
 
-  constructor(private katakanaCharacters: kanaChars){}
+  constructor(private katakanaCharacters: kanaChars, private responsive: BreakpointObserver){}
 
   ngOnInit(){
+    this.responsive.observe(Breakpoints.HandsetPortrait)
+      .subscribe(result => {
+        this.mobile = false;
+
+        if(result.matches){
+          this.mobile = true;
+        }
+      })
+
     this.shuffledChars = this.katakanaCharacters.shuffledKatakanaChars;
   }
 
