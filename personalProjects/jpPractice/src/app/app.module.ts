@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { SocialsComponent } from './socials/socials.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { RouterModule } from '@angular/router';
 import { HiraganaPageComponent } from './content/hiragana-page/hiragana-page.component';
 import { KatakanaPageComponent } from './content/katakana-page/katakana-page.component';
 import { StudyRoomComponent } from './content/study-room/study-room.component';
