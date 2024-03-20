@@ -1,4 +1,4 @@
-<div id="flashcard-container" class="pb-5">
+<div id="flashcard-container" class="pb-5" [ngClass]="{'mobile': mobile}">
   <app-card
   *ngFor="let card of shuffledChars; let i = index"
   inputIndex="{{ i }}"
