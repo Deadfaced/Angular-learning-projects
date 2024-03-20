@@ -7,8 +7,8 @@
   background-position: bottom;
   display: grid;
   grid-template-areas: 
-    '. hira .'
-    'study . kata'
+    '. study .'
+    'hira . kata'
   ;
   width: 100%;
 }
