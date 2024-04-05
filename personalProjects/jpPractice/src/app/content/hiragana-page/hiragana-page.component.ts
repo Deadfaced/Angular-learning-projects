@@ -6,7 +6,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 @Component({
   selector: 'app-hiragana-page',
   templateUrl: './hiragana-page.component.html',
-  styleUrl: './hiragana-page.component.css',
+  styleUrls: ['./hiragana-page.component.css'],
   providers: [kanaChars]
 })
 export class HiraganaPageComponent implements OnInit {
@@ -58,7 +58,7 @@ export class HiraganaPageComponent implements OnInit {
     if(+this.score >= 50){
       this.approved = true;
     }else{
-      this.approved = true;
+      this.approved = false;
     }
   }
 }
