@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/jp-practice/browser/",
+    "public": "dist/jp-practice/",
     "ignore": [
       "firebase.json",
       "**/.*",
