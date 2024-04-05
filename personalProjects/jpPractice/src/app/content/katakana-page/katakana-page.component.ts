@@ -6,7 +6,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 @Component({
   selector: 'app-katakana-page',
   templateUrl: './katakana-page.component.html',
-  styleUrl: './katakana-page.component.css',
+  styleUrls: ['./katakana-page.component.css'],
   providers: [kanaChars]
 })
 export class KatakanaPageComponent {

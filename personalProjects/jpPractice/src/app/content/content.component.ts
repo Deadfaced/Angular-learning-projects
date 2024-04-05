@@ -4,7 +4,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrl: './content.component.css'
+  styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit{
   constructor(private responsive: BreakpointObserver){}

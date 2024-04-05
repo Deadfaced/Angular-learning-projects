@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
-  styleUrl: './content-card.component.css'
+  styleUrls: ['./content-card.component.css']
 })
 export class ContentCardComponent implements OnInit{
   @Input() rTitle: string;

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-study-room',
   templateUrl: './study-room.component.html',
-  styleUrl: './study-room.component.css'
+  styleUrls: ['./study-room.component.css']
 })
 export class StudyRoomComponent implements OnInit{
   constructor(private jpChars: kanaChars, private responsive: BreakpointObserver, private router: Router){}
