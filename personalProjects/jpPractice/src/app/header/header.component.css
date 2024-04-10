@@ -1,6 +1,7 @@
 .navbar{
     padding: 1rem;
     background-color: #292929 !important;
+    width: 100dvw;
     max-width: 100% !important;
     max-height: fit-content;
 }
@@ -16,7 +17,4 @@
     display: none !important;
     height: 0 !important;
     width: 0 !important;
-}
-.navbar-link{
-    width: 25% !important;
 }

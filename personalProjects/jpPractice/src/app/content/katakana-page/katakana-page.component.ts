@@ -61,4 +61,7 @@ export class KatakanaPageComponent implements OnInit {
       this.approved = false;
     }
   }
+  asdhk(){
+    console.log(Breakpoints.TabletLandscape);
+  }
 }

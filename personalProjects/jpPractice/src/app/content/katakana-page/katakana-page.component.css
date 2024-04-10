@@ -1,8 +1,8 @@
 #flashcard-container{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-items: center;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 3rem;
+    gap: 3rem;
     text-align: center;
     margin: 2rem 10rem 1rem 10rem;
     padding-top: 2rem;
@@ -18,13 +18,10 @@
   }
   
   #flashcard-container.mobile{
-    grid-template-columns: repeat(1, 1fr);
     max-height: 42rem;
-    grid-gap: 2rem;
     margin: 4rem 0 1rem 0;
   }
   #flashcard-container.mobileLandscape{
-    grid-template-columns: repeat(3, 1fr);
     max-height: 11rem;
     margin: 4rem 0 1rem 0;
     padding-top: 0;

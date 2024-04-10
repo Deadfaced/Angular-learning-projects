@@ -1,5 +1,5 @@
 <nav class="navbar d-flex justify-content-between align-items-center bg-dark" [ngClass]="{'hidden': navbarHidden}">
-    <div class="w-15 px-4" [ngClass]="{'navbar-link': tabletLandscape}">
+    <div class="px-4" style="width: 15rem;">
         <a routerLink="/study-room" routerLinkActive="text-danger">Study Room</a>
     </div>
     <div class="home">
@@ -7,7 +7,7 @@
             <img src="../../assets/homeIconWhite.jpg" height="50px" width="50px" alt="" style="border-radius: 50%;">
         </a>
     </div>
-    <div class="d-flex justify-content-between w-15 px-4" [ngClass]="{'navbar-link': tabletLandscape}">
+    <div class="d-flex px-4" style="gap: 3rem; width: 15rem;">
         <a routerLink="/hiragana-page" routerLinkActive="text-danger">Hiragana</a>
         <a routerLink="/katakana-page" routerLinkActive="text-danger">Katakana</a>
     </div>
