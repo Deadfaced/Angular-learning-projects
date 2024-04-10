@@ -13,30 +13,42 @@ export class HiraganaPageComponent implements OnInit {
   shuffledChars: Character[] = [];
   submitted: boolean = false;
   correctAnswers: number[] = [];
-  totalCorrect: number;
-  totalAnswers: number;
+  wrongAnswers: number[] = [];
+  totalCorrect: number = 0;
+  totalWrong: number = 0;
+  totalAnswers: number = 0;
   score: string;
   approved: boolean;
   mobile = false;
   mobileLandscape = false;
+  tablet = false;
+  tabletLandscape = false;
 
   constructor(private hiraganaCharacters: kanaChars, private responsive: BreakpointObserver){}
 
   ngOnInit(){
     this.responsive.observe([
-      Breakpoints.HandsetPortrait,
-      Breakpoints.HandsetLandscape
+      Breakpoints.HandsetPortrait, 
+      Breakpoints.HandsetLandscape,
+      Breakpoints.TabletLandscape,
+      Breakpoints.TabletPortrait
     ])
       .subscribe(result => {
         const breakpoints = result.breakpoints;
 
         this.mobile = false;
         this.mobileLandscape = false;
+        this.tablet = false;
+        this.tabletLandscape = false;
 
         if(breakpoints[Breakpoints.HandsetPortrait]){
           this.mobile = true;
         }else if(breakpoints[Breakpoints.HandsetLandscape]){
           this.mobileLandscape = true;
+        }else if(breakpoints[Breakpoints.TabletPortrait]){
+          this.tablet = true;
+        }else if(breakpoints[Breakpoints.TabletLandscape]){
+          this.tabletLandscape = true;
         }
       })
 
@@ -44,7 +56,16 @@ export class HiraganaPageComponent implements OnInit {
   }
 
   countCorrectAnswers(event){
-    this.correctAnswers.push(event);
+    if(event.correct){
+      this.correctAnswers.push(event.id);
+      this.totalCorrect++;
+    }
+    else{
+      this.wrongAnswers.push(event.id);
+      this.totalWrong++;
+    }
+    console.log('correct:', this.correctAnswers, '; #right: ', this.totalCorrect);
+    console.log('wrong:', this.wrongAnswers, '; #wrong', this.totalWrong);
   }
 
   showScore(){

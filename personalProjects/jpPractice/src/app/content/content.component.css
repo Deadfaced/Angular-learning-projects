@@ -32,7 +32,11 @@
   display: flex;
   justify-content: space-between;
   padding: 0;
-  margin: 2rem;
+  padding-top: 2rem;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
 }
 
 .main-page.tablet{
@@ -42,7 +46,7 @@
 }
 
 
-.hiragana, .katakana, .study-room{
+.option-card{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,8 +61,20 @@
   grid-area: study;
 }
 
-.hiragana.mobile, .katakana.mobile, .study-room.mobile{
+/**
+* mobile
+*/
+.option-card.mobile{
   height: 100dvh;
+}
+
+
+/**
+* tablet
+*/
+
+.option-card.mobileLandscape{
+  width: 100dvw;
 }
 
 

@@ -14,11 +14,16 @@
     transform: scale(1.2);
     z-index: 1001;
 }
-.option.mobile-option{
+.option.mobile-option, .option.mobile-landscape-option{
     height: 80dvh;
     width: 80dvw;
     margin: 10dvh 10dvw;
     transform: none !important;
+}
+
+.option.mobile-landscape-option{
+    scroll-snap-align: center;
+    height: 70dvh;
 }
 
 p{

@@ -1,4 +1,4 @@
-<div class="flashcard" [ngClass]="{shake: correctAnswer === false}" [ngStyle]="{backgroundColor: correctAnswer ? 'lightgreen' : 'rgb(57, 153, 212)'}">
-  <p class="hiragana">{{ char }}</p>
+<div class="flashcard" [ngClass]="{shake: correctAnswer === false && exam === false}" [ngStyle]="{backgroundColor: correctAnswer && !exam ? 'lightgreen' : 'rgb(57, 153, 212)'}" [ngClass]="{'mobileLandscape': mobileLandscape}">
+  <p class="char">{{ char }}</p>
   <input id="{{ inputIndex }}" type="text" (change)="validation($event)" [disabled]="correctAnswer" autocomplete="off">
 </div>

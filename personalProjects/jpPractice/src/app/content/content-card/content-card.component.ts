@@ -12,16 +12,36 @@ export class ContentCardComponent implements OnInit{
   @Input() cPath: string;
   @Input() buttText: string;
   mobileOption = false;
+  mobileLandscapeOption = false;
+  tabletOption = false;
+  tabletLandscapeOption = false;
 
   constructor(private responsive: BreakpointObserver){}
 
   ngOnInit(): void {
-    this.responsive.observe(Breakpoints.HandsetPortrait)
-      .subscribe(result => {
-        this.mobileOption = false;
+    this.responsive.observe([
+      Breakpoints.HandsetPortrait,
+      Breakpoints.HandsetLandscape,
+      Breakpoints.TabletPortrait,
+      Breakpoints.TabletLandscape,
+    ])
+      .subscribe(
+        result => {
+          const breakpoints = result.breakpoints;
+        
+          this.mobileOption = false;
+          this.mobileLandscapeOption = false;
+          this.tabletOption = false;
+          this.tabletLandscapeOption = false;
 
-        if(result.matches){
+        if(breakpoints[Breakpoints.HandsetPortrait]){
           this.mobileOption = true;
+        }else if(breakpoints[Breakpoints.HandsetLandscape]){
+          this.mobileLandscapeOption = true;
+        }else if(breakpoints[Breakpoints.TabletPortrait]){
+          this.tabletOption = true;
+        }else if(breakpoints[Breakpoints.TabletPortrait]){
+          this.tabletLandscapeOption = true;
         }
       })
   }

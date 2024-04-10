@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Character } from '../../shared/character.model';
 import { kanaChars } from '../../kanaChars.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -9,7 +9,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./katakana-page.component.css'],
   providers: [kanaChars]
 })
-export class KatakanaPageComponent {
+export class KatakanaPageComponent implements OnInit {
   shuffledChars: Character[] = [];
   submitted: boolean = false;
   correctAnswers: number[] = [];

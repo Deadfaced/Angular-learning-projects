@@ -12,8 +12,12 @@
   scroll-snap-align: center;
 }
 
+.flashcard.mobileLandscape{
+  height: 10rem
+}
 
-.hiragana{
+
+.char{
   font-size: 2em;
   font-family: sans-serif;
   color: white;
