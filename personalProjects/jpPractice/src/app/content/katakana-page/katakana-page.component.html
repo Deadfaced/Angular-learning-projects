@@ -19,6 +19,6 @@
   </button>
   <div class="score-submitted" *ngIf="submitted" [ngClass]="{'mobileLandscape': mobileLandscape}">
     <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
-    <p class="btn" [ngClass]="{'approved': approved, 'reproved': !approved}">Score: {{ score }}%</p>
+    <p class="btn" [ngClass]="{'approved': approved, 'reproved': !approved}" style="cursor: auto;">Score: {{ score }}%</p>
   </div>
 </div>
