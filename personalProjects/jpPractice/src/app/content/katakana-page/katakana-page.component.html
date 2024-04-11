@@ -1,4 +1,4 @@
-<div
+<!-- <div
   id="flashcard-container"
   class="pb-5"
   [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
@@ -21,4 +21,9 @@
     <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
     <p class="btn" [ngClass]="{'approved': approved, 'reproved': !approved}" style="cursor: auto;">Score: {{ score }}%</p>
   </div>
+</div> -->
+
+<div class="katakana">
+  <app-content-card rTitle="Practice" kTitle="レンシュウ" buttText="Start Quiz" cPath="flashcard-container/practice"/>
+  <app-content-card rTitle="Exam" kTitle="シケン" buttText="Start Quiz" cPath="flashcard-container/exam"/>
 </div>

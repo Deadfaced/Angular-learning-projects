@@ -20,6 +20,7 @@ export class CardComponent implements OnInit{
   constructor(private responsive: BreakpointObserver) { }
 
   ngOnInit(){
+    console.log(this.exam)
     this.responsive.observe([
       Breakpoints.HandsetPortrait, 
       Breakpoints.HandsetLandscape,

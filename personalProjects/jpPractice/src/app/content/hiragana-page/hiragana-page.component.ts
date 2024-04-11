@@ -51,22 +51,9 @@ export class HiraganaPageComponent implements OnInit {
           this.tabletLandscape = true;
         }
       })
-
-    this.shuffledChars = this.hiraganaCharacters.shuffledHiraganaChars.slice();
   }
 
-  countCorrectAnswers(event){
-    if(event.correct){
-      this.correctAnswers.push(event.id);
-      this.totalCorrect++;
-    }
-    else{
-      this.wrongAnswers.push(event.id);
-      this.totalWrong++;
-    }
-    console.log('correct:', this.correctAnswers, '; #right: ', this.totalCorrect);
-    console.log('wrong:', this.wrongAnswers, '; #wrong', this.totalWrong);
-  }
+  
 
   showScore(){
     this.submitted = true;

@@ -39,12 +39,6 @@ export class KatakanaPageComponent implements OnInit {
           this.mobileLandscape = true;
         }
       })
-
-    this.shuffledChars = this.katakanaCharacters.shuffledKatakanaChars.slice();
-  }
-
-  countCorrectAnswers(event){
-    this.correctAnswers.push(event);
   }
 
   showScore(){
@@ -60,8 +54,5 @@ export class KatakanaPageComponent implements OnInit {
     }else{
       this.approved = false;
     }
-  }
-  asdhk(){
-    console.log(Breakpoints.TabletLandscape);
   }
 }

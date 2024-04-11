@@ -1,4 +1,4 @@
-<div
+<!-- <div
   id="flashcard-container"
   class="pb-5"
   [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
@@ -12,6 +12,9 @@
   (sendAnswer)="countCorrectAnswers($event)"
   />
 
+  <app-flashcard-container />
+
+
 </div>
 <div class="score" style="gap: 2rem;" [ngClass]="{'mobile': submitted && mobile}">
   <button type="button" class="btn btn-primary" (click)="showScore()">
@@ -21,4 +24,9 @@
     <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
     <p class="btn" [ngClass]="{'approved': approved, 'reproved': !approved}" style="cursor: auto;">Score: {{ score }}%</p>
   </div>
+</div> -->
+
+<div class="hiragana">
+  <app-content-card rTitle="Practice" kTitle="れんしゅう" buttText="Start Quiz" cPath="flashcard-container/practice"/>
+  <app-content-card rTitle="Exam" kTitle="しけん" buttText="Start Quiz" cPath="flashcard-container/exam"/>
 </div>

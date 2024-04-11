@@ -14,6 +14,7 @@ import { CardComponent } from './content/card/card.component';
 import { ContentCardComponent } from './content/content-card/content-card.component';
 import { AppRoutingModule } from './app-routing.module';
 import { kanaChars } from './kanaChars.service';
+import { FlashcardContainerComponent } from './flashcard-container/flashcard-container.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { kanaChars } from './kanaChars.service';
     StudyRoomComponent,
     PageNotFoundComponent,
     CardComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    FlashcardContainerComponent
   ],
   imports: [
     BrowserModule,

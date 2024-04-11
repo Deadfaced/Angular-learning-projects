@@ -1,0 +1,17 @@
+<div
+  id="flashcard-container"
+  class="pb-5"
+  [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
+
+
+  <app-card
+  *ngFor="let card of shuffledChars; let i = index"
+  inputIndex="{{ i }}"
+  char="{{ card.char }}"
+  romaji="{{ card.romaji }}"
+  alt="{{ card.alt }}"
+  (sendAnswer)="countCorrectAnswers($event)"
+  [exam]="isExam"
+  />
+
+</div>

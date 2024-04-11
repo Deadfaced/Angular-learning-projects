@@ -5,6 +5,7 @@ import { HiraganaPageComponent } from "./content/hiragana-page/hiragana-page.com
 import { KatakanaPageComponent } from "./content/katakana-page/katakana-page.component";
 import { StudyRoomComponent } from "./content/study-room/study-room.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { FlashcardContainerComponent } from "./flashcard-container/flashcard-container.component";
 
 const appRoutes: Routes = [
     {
@@ -27,6 +28,10 @@ const appRoutes: Routes = [
       {
         path: 'study-room',
         component: StudyRoomComponent
+      },
+      {
+        path: ':charType/flashcard-container/:formType',
+        component: FlashcardContainerComponent
       },
 
       {

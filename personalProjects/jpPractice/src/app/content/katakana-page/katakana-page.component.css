@@ -1,32 +1,14 @@
-#flashcard-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    gap: 3rem;
-    text-align: center;
-    margin: 2rem 10rem 1rem 10rem;
-    padding-top: 2rem;
-    max-height: 45rem;
-    overflow: scroll;
-    scroll-snap-type: y mandatory;
-  }
-  #flashcard-container::-webkit-scrollbar{
-    display: none;
-  }
-  #flashcard-container > *{
-    scroll-snap-align: center;
-  }
-  
-  #flashcard-container.mobile{
-    max-height: 42rem;
-    margin: 4rem 0 1rem 0;
-  }
-  #flashcard-container.mobileLandscape{
-    max-height: 11rem;
-    margin: 4rem 0 1rem 0;
-    padding-top: 0;
-    margin-bottom: 1rem;
-  }
+:host{
+  width: 100%;
+}
+
+.katakana{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
   
   .score{
     display: flex;
