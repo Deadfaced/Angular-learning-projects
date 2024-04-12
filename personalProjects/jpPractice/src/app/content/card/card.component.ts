@@ -1,5 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -17,10 +18,9 @@ export class CardComponent implements OnInit{
 
   correctAnswer: boolean = undefined;
 
-  constructor(private responsive: BreakpointObserver) { }
+  constructor(private responsive: BreakpointObserver, private route: ActivatedRoute) { }
 
   ngOnInit(){
-    console.log(this.exam)
     this.responsive.observe([
       Breakpoints.HandsetPortrait, 
       Breakpoints.HandsetLandscape,
@@ -36,7 +36,6 @@ export class CardComponent implements OnInit{
           this.mobileLandscape = true;
         }
       })
-      
   }
 
   validation(event){

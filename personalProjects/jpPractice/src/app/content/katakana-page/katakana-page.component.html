@@ -1,28 +1,3 @@
-<!-- <div
-  id="flashcard-container"
-  class="pb-5"
-  [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
-  
-    <app-card
-    *ngFor="let card of shuffledChars; let i = index"
-    inputIndex="{{ i }}"
-    char="{{ card.char }}"
-    romaji="{{ card.romaji }}"
-    alt="{{ card.alt }}"
-    (sendAnswer)="countCorrectAnswers($event)"
-    />
-  
-</div>
-<div class="score" style="gap: 2rem;" [ngClass]="{'mobile': submitted && mobile}">
-  <button type="button" class="btn btn-primary" (click)="showScore()">
-    Submit answers
-  </button>
-  <div class="score-submitted" *ngIf="submitted" [ngClass]="{'mobileLandscape': mobileLandscape}">
-    <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>
-    <p class="btn" [ngClass]="{'approved': approved, 'reproved': !approved}" style="cursor: auto;">Score: {{ score }}%</p>
-  </div>
-</div> -->
-
 <div class="katakana">
   <app-content-card rTitle="Practice" kTitle="レンシュウ" buttText="Start Quiz" cPath="flashcard-container/practice"/>
   <app-content-card rTitle="Exam" kTitle="シケン" buttText="Start Quiz" cPath="flashcard-container/exam"/>
