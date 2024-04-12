@@ -14,9 +14,7 @@ export class HiraganaPageComponent implements OnInit {
   submitted: boolean = false;
   correctAnswers: number[] = [];
   wrongAnswers: number[] = [];
-  totalCorrect: number = 0;
   totalWrong: number = 0;
-  totalAnswers: number = 0;
   score: string;
   approved: boolean;
   mobile = false;
@@ -51,22 +49,5 @@ export class HiraganaPageComponent implements OnInit {
           this.tabletLandscape = true;
         }
       })
-  }
-
-  
-
-  showScore(){
-    this.submitted = true;
-    this.totalCorrect = this.correctAnswers.length;
-    this.totalAnswers = this.shuffledChars.length;
-
-    this.hiraganaCharacters.scoreDisplay(this.totalCorrect, this.totalAnswers);
-    this.score = this.hiraganaCharacters.score;
-
-    if(+this.score >= 50){
-      this.approved = true;
-    }else{
-      this.approved = false;
-    }
   }
 }

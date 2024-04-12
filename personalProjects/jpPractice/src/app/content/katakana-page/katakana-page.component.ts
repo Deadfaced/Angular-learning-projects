@@ -13,8 +13,6 @@ export class KatakanaPageComponent implements OnInit {
   shuffledChars: Character[] = [];
   submitted: boolean = false;
   correctAnswers: number[] = [];
-  totalCorrect: number;
-  totalAnswers: number;
   score: string;
   approved: boolean;
   mobile = false;
@@ -39,20 +37,5 @@ export class KatakanaPageComponent implements OnInit {
           this.mobileLandscape = true;
         }
       })
-  }
-
-  showScore(){
-    this.submitted = true;
-    this.totalCorrect = this.correctAnswers.length;
-    this.totalAnswers = this.shuffledChars.length;
-
-    this.katakanaCharacters.scoreDisplay(this.totalCorrect, this.totalAnswers);
-    this.score = this.katakanaCharacters.score;
-
-    if(+this.score >= 50){
-      this.approved = true;
-    }else{
-      this.approved = false;
-    }
   }
 }

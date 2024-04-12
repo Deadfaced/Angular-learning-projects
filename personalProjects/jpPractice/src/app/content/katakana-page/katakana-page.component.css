@@ -9,32 +9,3 @@
   align-items: center;
   justify-content: space-evenly;
 }
-  
-  .score{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    width: 100%;
-  }
-  .score.mobile{
-    justify-content: space-between;
-    width: 90dvw;
-  }
-  
-  .score-submitted.mobileLandscape{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-.approved{
-  color: green;
-  background-color: lightgreen;
-  border: 2px solid green;
-}
-.reproved{
-  color: red;
-  background-color: darksalmon;
-  border: 1px solid red;
-  font-weight: bold;
-}

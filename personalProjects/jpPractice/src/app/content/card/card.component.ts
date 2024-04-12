@@ -1,6 +1,7 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ScoreComponent } from '../../score/score.component';
+import { Score } from '../../score/score.service';
 
 @Component({
   selector: 'app-card',
@@ -18,7 +19,7 @@ export class CardComponent implements OnInit{
 
   correctAnswer: boolean = undefined;
 
-  constructor(private responsive: BreakpointObserver, private route: ActivatedRoute) { }
+  constructor(private responsive: BreakpointObserver, private score: Score) { }
 
   ngOnInit(){
     this.responsive.observe([
@@ -41,8 +42,10 @@ export class CardComponent implements OnInit{
   validation(event){
     if(event.target.value.toLowerCase() === this.romaji || event.target.value.toLowerCase() === this.alt){
       this.correctAnswer = true;
+      this.score.onCorrectAnswer(this.char)
     } else{
       this.correctAnswer = false;
+      this.score.onWrongAnswer(this.char)
     }
     this.sendAnswer.emit({id: this.inputIndex, correct: this.correctAnswer});
     const nextInput: string = (++this.inputIndex).toString();

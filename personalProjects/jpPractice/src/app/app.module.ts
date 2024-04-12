@@ -15,6 +15,8 @@ import { ContentCardComponent } from './content/content-card/content-card.compon
 import { AppRoutingModule } from './app-routing.module';
 import { kanaChars } from './kanaChars.service';
 import { FlashcardContainerComponent } from './flashcard-container/flashcard-container.component';
+import { ScoreComponent } from './score/score.component';
+import { Score } from './score/score.service';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,15 @@ import { FlashcardContainerComponent } from './flashcard-container/flashcard-con
     PageNotFoundComponent,
     CardComponent,
     ContentCardComponent,
-    FlashcardContainerComponent
+    FlashcardContainerComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [kanaChars],
+  providers: [kanaChars, Score],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
