@@ -1,4 +1,4 @@
-<div class="katakana">
-  <app-content-card rTitle="Practice" kTitle="レンシュウ" buttText="Start Quiz" cPath="flashcard-container/practice"/>
-  <app-content-card rTitle="Exam" kTitle="シケン" buttText="Start Quiz" cPath="flashcard-container/exam"/>
+<div class="katakana" [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape, 'tablet': tablet, 'tabletLandscape': tabletLandscape}">
+  <app-content-card rTitle="Practice" kTitle="レンシュウ" buttText="Start Quiz" cPath="flashcards/practice"/>
+  <app-content-card rTitle="Exam" kTitle="シケン" buttText="Start Quiz" cPath="flashcards/exam"/>
 </div>

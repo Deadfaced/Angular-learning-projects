@@ -17,6 +17,7 @@ import { kanaChars } from './kanaChars.service';
 import { FlashcardContainerComponent } from './flashcard-container/flashcard-container.component';
 import { ScoreComponent } from './score/score.component';
 import { Score } from './score/score.service';
+import { WrongAnswersComponent } from './wrong-answers/wrong-answers.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Score } from './score/score.service';
     CardComponent,
     ContentCardComponent,
     FlashcardContainerComponent,
-    ScoreComponent
+    ScoreComponent,
+    WrongAnswersComponent
   ],
   imports: [
     BrowserModule,

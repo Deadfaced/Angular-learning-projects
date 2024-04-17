@@ -6,6 +6,7 @@ import { KatakanaPageComponent } from "./content/katakana-page/katakana-page.com
 import { StudyRoomComponent } from "./content/study-room/study-room.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { FlashcardContainerComponent } from "./flashcard-container/flashcard-container.component";
+import { WrongAnswersComponent } from "./wrong-answers/wrong-answers.component";
 
 const appRoutes: Routes = [
     {
@@ -30,8 +31,12 @@ const appRoutes: Routes = [
         component: StudyRoomComponent
       },
       {
-        path: ':charType/flashcard-container/:formType',
+        path: ':charType/flashcards/:formType',
         component: FlashcardContainerComponent
+      },
+      {
+        path: ':charType/flashcards/exam/revision',
+        component: WrongAnswersComponent
       },
 
       {

@@ -1,4 +1,4 @@
-<div class="hiragana">
-  <app-content-card rTitle="Practice" kTitle="れんしゅう" buttText="Start Quiz" cPath="flashcard-container/practice"/>
-  <app-content-card rTitle="Exam" kTitle="しけん" buttText="Start Quiz" cPath="flashcard-container/exam"/>
+<div class="hiragana" [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape, 'tablet': tablet, 'tabletLandscape': tabletLandscape}">
+  <app-content-card rTitle="Practice" kTitle="れんしゅう" buttText="Start Quiz" cPath="flashcards/practice"/>
+  <app-content-card rTitle="Exam" kTitle="しけん" buttText="Start Quiz" cPath="flashcards/exam"/>
 </div>

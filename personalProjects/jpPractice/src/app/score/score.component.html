@@ -1,7 +1,10 @@
 
-<div class="score" style="gap: 2rem;" [ngClass]="{'mobile': submitted && mobile}">
-  <button type="button" class="btn btn-primary" (click)="showScore()">
+<div class="score" style="gap: 2rem;" [ngClass]="{'mobile': mobile}" [ngStyle]="{justifyContent: submitted && mobile && formType === 'exam' ? 'space-between' : 'center'}">
+  <button *ngIf="!submitted" type="button" class="btn btn-primary" (click)="showScore()">
     Submit answers
+  </button>
+  <button *ngIf="submitted && formType === 'exam'" type="button" class="btn btn-primary" routerLink = "revision">
+    Wrong answers
   </button>
   <div class="score-submitted" *ngIf="submitted" [ngClass]="{'mobileLandscape': mobileLandscape}">
     <p>Correct answers: {{ totalCorrect }}/{{ totalAnswers }}</p>

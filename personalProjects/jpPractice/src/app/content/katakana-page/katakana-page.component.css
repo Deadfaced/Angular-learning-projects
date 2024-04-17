@@ -9,3 +9,35 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.katakana.mobile > div{
+  scroll-snap-align: center;
+}
+
+.katakana.mobile{
+  overflow: scroll;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  scroll-snap-type: y mandatory; 
+}
+.katakana.mobile::-webkit-scrollbar{
+  display: none;
+}
+
+.katakana.mobileLandscape{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 2rem;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.katakana.tablet{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

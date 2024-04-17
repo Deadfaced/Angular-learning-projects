@@ -45,7 +45,7 @@ export class CardComponent implements OnInit{
       this.score.onCorrectAnswer(this.char)
     } else{
       this.correctAnswer = false;
-      this.score.onWrongAnswer(this.char)
+      this.score.onWrongAnswer(this.char, this.romaji, this.alt)
     }
     this.sendAnswer.emit({id: this.inputIndex, correct: this.correctAnswer});
     const nextInput: string = (++this.inputIndex).toString();

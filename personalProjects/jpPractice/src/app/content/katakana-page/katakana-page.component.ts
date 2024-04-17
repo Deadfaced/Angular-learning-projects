@@ -17,24 +17,34 @@ export class KatakanaPageComponent implements OnInit {
   approved: boolean;
   mobile = false;
   mobileLandscape = false;
+  tablet = false;
+  tabletLandscape = false;
 
   constructor(private katakanaCharacters: kanaChars, private responsive: BreakpointObserver){}
 
   ngOnInit(){
     this.responsive.observe([
       Breakpoints.HandsetPortrait,
-      Breakpoints.HandsetLandscape
+      Breakpoints.HandsetLandscape,
+      Breakpoints.TabletLandscape,
+      Breakpoints.TabletPortrait
     ])
       .subscribe(result => {
         const breakpoints = result.breakpoints;
 
         this.mobile = false;
         this.mobileLandscape = false;
+        this.tablet = false;
+        this.tabletLandscape = false;
 
         if(breakpoints[Breakpoints.HandsetPortrait]){
           this.mobile = true;
         }else if(breakpoints[Breakpoints.HandsetLandscape]){
           this.mobileLandscape = true;
+        }else if(breakpoints[Breakpoints.TabletPortrait]){
+          this.tablet = true;
+        }else if(breakpoints[Breakpoints.TabletLandscape]){
+          this.tabletLandscape = true;
         }
       })
   }

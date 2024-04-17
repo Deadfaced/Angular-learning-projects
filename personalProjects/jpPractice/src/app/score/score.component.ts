@@ -21,6 +21,8 @@ export class ScoreComponent {
   mobileLandscape = false;
   tablet = false;
   tabletLandscape = false;
+  charType: string;
+  formType: string;
   
 
   constructor(private scoreService: Score, private kanaChars: kanaChars, private responsive: BreakpointObserver, private route: ActivatedRoute){}
@@ -57,9 +59,10 @@ export class ScoreComponent {
   showScore(){
     this.submitted = true;
 
-    let charType = this.route.snapshot.paramMap.get('charType');
+    this.charType = this.route.snapshot.paramMap.get('charType');
+    this.formType = this.route.snapshot.paramMap.get('formType');
 
-    this.totalAnswers = charType === 'hiragana-page' ? this.kanaChars.hiraganaChars.length : this.kanaChars.katakanaChars.length;
+    this.totalAnswers = this.charType === 'hiragana-page' ? this.kanaChars.hiraganaChars.length : this.kanaChars.katakanaChars.length;
     this.totalCorrect = this.scoreService.correctAnswers.length;
 
     this.score = ((this.totalCorrect / this.totalAnswers) * 100).toFixed(2);

@@ -1,3 +1,8 @@
+:host{
+  display: flex;
+  align-items: center;
+}
+
 .score{
   display: flex;
   justify-content: center;
@@ -5,8 +10,9 @@
   width: 100%;
 }
 .score.mobile{
-  justify-content: space-between;
-  width: 90dvw;
+  height: 10rem;
+  align-items: center;
+  padding: 0 2rem;
 }
   
 .score-submitted.mobileLandscape{

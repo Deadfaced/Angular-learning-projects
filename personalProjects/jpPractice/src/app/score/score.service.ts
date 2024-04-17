@@ -6,7 +6,7 @@ export class Score{
     onCorrectAnswer(char: string){
         this.correctAnswers.push(char);
     }
-    onWrongAnswer(char: string){
-        this.wrongAnswers.push(char);
+    onWrongAnswer(char: string, romaji: string, alt: string){
+        this.wrongAnswers.push({char, romaji, alt});
     }
 }

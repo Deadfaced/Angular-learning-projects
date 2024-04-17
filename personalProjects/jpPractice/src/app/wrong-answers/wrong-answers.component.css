@@ -1,3 +1,8 @@
+:host{
+  height: 100dvh;
+  width: 100dvw;
+}
+
 #flashcard-container{
     display: flex;
     flex-wrap: wrap;
@@ -14,11 +19,11 @@
     display: none;
   }
   #flashcard-container > *{
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
   
   #flashcard-container.mobile{
-    max-height: 30rem;
+    max-height: 32rem;
     margin: 4rem 0 1rem 0;
   }
   #flashcard-container.mobileLandscape{

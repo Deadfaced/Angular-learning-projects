@@ -1,0 +1,13 @@
+<div *ngIf="wrongAns.length > 0" id="flashcard-container" [ngClass]="{'mobile': mobile, 'mobileLandscape': mobileLandscape}">
+    <app-card
+    *ngFor="let card of wrongAns" 
+    char="{{ card.char }}"
+    romaji="{{ card.romaji }}"
+    alt="{{ card.alt }}"
+        />
+</div>
+
+<div class="d-flex justify-content-evenly align-items-center w-100" [ngStyle]="{height: wrongAns.length > 0 ? '10rem' : '100%'}">
+    <button class="btn btn-primary" (click)="wrongAns = []" routerLink="../">Return</button>
+    <button class="btn btn-primary" (click)="wrongAns = []" routerLink="/study-room">Study Room</button>
+</div>
