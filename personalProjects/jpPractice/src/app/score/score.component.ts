@@ -60,13 +60,11 @@ export class ScoreComponent {
     let charType = this.route.snapshot.paramMap.get('charType');
 
     this.totalAnswers = charType === 'hiragana-page' ? this.kanaChars.hiraganaChars.length : this.kanaChars.katakanaChars.length;
-    
-
-    this.kanaChars.scoreDisplay(this.scoreService.correctAnswers.length, this.totalAnswers);
     this.totalCorrect = this.scoreService.correctAnswers.length;
-    this.score = this.kanaChars.score;
 
-    if(+this.kanaChars.score >= 50){
+    this.score = ((this.totalCorrect / this.totalAnswers) * 100).toFixed(2);
+
+    if(+this.score >= 50){
       this.approved = true;
     }else{
       this.approved = false;

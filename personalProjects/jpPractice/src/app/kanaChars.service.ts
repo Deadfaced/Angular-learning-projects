@@ -283,12 +283,6 @@ export class kanaChars{
         new Character('ピュ', 'pyu', ''),
         new Character('ピョ', 'pyo', ''),
       ];
-
-
-      submit: boolean = false;
-      totalCorr: number;
-      totalAnswers: number;
-      score: string;
     
       shuffle = (array: Character[]) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -301,11 +295,4 @@ export class kanaChars{
     
       shuffledHiraganaChars = this.shuffle(this.hiraganaChars.slice());
       shuffledKatakanaChars = this.shuffle(this.katakanaChars.slice());
-    
-      
-      scoreDisplay(tCorrect: number, tAnswers: number){
-        this.totalCorr = tCorrect;
-        this.totalAnswers = tAnswers;
-        this.score = ((this.totalCorr / this.totalAnswers) * 100).toFixed(2);
-      }
 }
