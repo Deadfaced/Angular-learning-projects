@@ -1,4 +1,7 @@
 <div class="flashcard" [ngClass]="{shake: correctAnswer === false && exam === false}" [ngStyle]="{backgroundColor: correctAnswer && !exam ? 'lightgreen' : 'rgb(57, 153, 212)'}" [ngClass]="{'mobileLandscape': mobileLandscape}">
   <p class="char">{{ char }}</p>
-  <input id="{{ inputIndex }}" type="text" (change)="validation($event)" [disabled]="correctAnswer && !exam" autocomplete="off">
+  <input *ngIf="revision === false; else revisionTemplate" id="{{ inputIndex }}" type="text" (change)="validation($event)" [disabled]="correctAnswer && !exam" autocomplete="off">
+  <ng-template #revisionTemplate>
+    <input type="text" class="revision" disabled value="{{ romaji }}">
+  </ng-template>
 </div>

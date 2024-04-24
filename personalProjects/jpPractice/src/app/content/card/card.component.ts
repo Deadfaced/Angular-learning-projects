@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ScoreComponent } from '../../score/score.component';
 import { Score } from '../../score/score.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -15,11 +16,12 @@ export class CardComponent implements OnInit{
   @Input() inputIndex: number;
   @Output() sendAnswer = new EventEmitter<{id: number, correct: boolean}>();
   @Input() exam: boolean = true;
+  revision = false;
   mobileLandscape: boolean = false;
 
   correctAnswer: boolean = undefined;
 
-  constructor(private responsive: BreakpointObserver, private score: Score) { }
+  constructor(private responsive: BreakpointObserver, private router: ActivatedRoute, private score: Score) { }
 
   ngOnInit(){
     this.responsive.observe([
@@ -37,6 +39,12 @@ export class CardComponent implements OnInit{
           this.mobileLandscape = true;
         }
       })
+
+      if(this.router.snapshot.url.some(url => url.path.includes('revision'))){
+        this.revision = true;
+      }else{
+        this.revision = false;
+      }      
   }
 
   validation(event){
