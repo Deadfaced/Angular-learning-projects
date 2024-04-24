@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { FlashcardContainerComponent } from './flashcard-container/flashcard-con
 import { ScoreComponent } from './score/score.component';
 import { Score } from './score/score.service';
 import { WrongAnswersComponent } from './wrong-answers/wrong-answers.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,13 @@ import { WrongAnswersComponent } from './wrong-answers/wrong-answers.component';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [kanaChars, Score],
   bootstrap: [AppComponent]
