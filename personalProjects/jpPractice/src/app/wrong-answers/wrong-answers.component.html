@@ -7,7 +7,7 @@
         />
 </div>
 
-<div class="d-flex justify-content-evenly align-items-center w-100" [ngStyle]="{height: wrongAns.length > 0 ? '10rem' : '100%'}">
-    <button class="btn btn-primary" (click)="wrongAns = []" routerLink="../">Return</button>
-    <button class="btn btn-primary" (click)="wrongAns = []" routerLink="/study-room">Study Room</button>
+<div class="d-flex justify-content-around align-items-center w-100" [ngStyle]="{height: wrongAns.length > 0 ? 'calc(100dvh - 35rem)' : '100%'}">
+    <button class="btn btn-primary" (click)="wrongAns = []" style="width: 8rem;" routerLink="../">Return</button>
+    <button class="btn btn-primary" (click)="wrongAns = []" style="width: 8rem;" routerLink="/study-room">Study Room</button>
 </div>
